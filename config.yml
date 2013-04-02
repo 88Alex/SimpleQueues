@@ -1,0 +1,11 @@
+# This is the configuration file for the SimpleQueues plugin.
+
+# The size of the queue. Cannot be changed in-game.
+size: 10
+
+# The action to be performed when the queue is full.
+on-full: "tp {ALL} 0 0 0
+# Special tags (case sensitive): 
+# {ALL} - all players in queue.
+# {TEAM1}, {TEAM2} - Teams 1 and 2 respectively.
+# {TEAM1[1]}, {TEAM1[2]}, ... - Each player 

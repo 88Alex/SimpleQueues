@@ -1,0 +1,47 @@
+name: SimpleQueues
+main: com.github.ethg242.simplequeues.SimpleQueues
+version: 0.1.0
+commands:
+  qlist:
+    description: Lists the queue.
+    usage: /qlist [id]
+    permission: SimpleQueues.list
+    permission-message: You don't have permission to use this command.
+  qadd:
+    description: Adds yourself or another player to the queue.
+    usage: /qadd [id] [player]
+  qremove:
+    description: Removes yourself or another player from the queue.
+    usage: /qremove [id] [player]
+  qreset:
+    description: Resets a queue queues.
+    usage: /qreset [id]
+permissions:
+  SimpleQueues.*:
+    description: Gives access to all SimpleQueues commands.
+    children:
+      SimpleQueues.list: true
+      SimpleQueues.addself: true
+      SimpleQueues.addother: true
+      SimpleQueues.removeself: true
+      SimpleQueues.removeother: true
+      SimpleQueues.reset: true
+  SimpleQueues.list:
+    description: Allows you to list the queue.
+    default: true
+  SimpleQueues.addself:
+    description: Allows you to add yourself to the queue.
+    default: true
+  SimpleQueues.addother:
+    description: Allows you to add another player to the queue.
+    default: op
+  SimpleQueues.removeself:
+    description: Allows you to remove yourself from the queue.
+    default: true
+  SimpleQueues.removeother:
+    description: Allows you to remove another player from the queue.
+    default: op
+  SimpleQueues.reset:
+    description: Allows you to reset the queue.
+    default: op
+    
